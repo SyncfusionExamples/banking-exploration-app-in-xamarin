@@ -1,0 +1,49 @@
+﻿<Properties StartupConfiguration="{65B555B9-5978-40ED-AED8-CD579CFE8BDB}|Default">
+  <MonoDevelop.Ide.ItemProperties.BankingExplorationApp.Android PreferredExecutionTarget="Android.1115fba155480902" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="BankingExplorationApp/Views/ActivityPage.xaml">
+    <Files>
+      <File FileName="BankingExplorationApp/App.xaml" Line="1" Column="1" />
+      <File FileName="BankingExplorationApp/App.xaml.cs" Line="13" Column="46" />
+      <File FileName="BankingExplorationApp.iOS/AppDelegate.cs" />
+      <File FileName="BankingExplorationApp/Views/ActivityPage.xaml" Line="68" Column="32" />
+      <File FileName="BankingExplorationApp/Views/SignInPage.xaml" Line="10" Column="1" />
+      <File FileName="BankingExplorationApp/Views/ActivityPage.xaml.cs" />
+      <File FileName="BankingExplorationApp/ViewModels/ActivityViewModel.cs" />
+      <File FileName="BankingExplorationApp/Views/SuccessPage.xaml" Line="10" Column="1" />
+      <File FileName="BankingExplorationApp/Models/Friends.cs" />
+      <File FileName="BankingExplorationApp/Models/Activities.cs" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="BankingExplorationApp" expanded="True" selected="True">
+            <Node name="BankingExplorationApp" expanded="True">
+              <Node name="Dependencies" expanded="True">
+                <Node name="PackageDependencies" expanded="True" />
+              </Node>
+              <Node name="Models" expanded="True" />
+              <Node name="ViewModels" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="ActivityPage.xaml" expanded="True" />
+              </Node>
+              <Node name="App.xaml" expanded="True" />
+            </Node>
+            <Node name="BankingExplorationApp.iOS" expanded="True">
+              <Node name="Resources" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.BankingExplorationApp.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.19246DB7-ED17-4769-94AD-22BF5FA8FA24" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

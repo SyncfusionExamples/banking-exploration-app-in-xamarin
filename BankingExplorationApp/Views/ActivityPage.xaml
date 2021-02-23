@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sfavatar="clr-namespace:Syncfusion.XForms.AvatarView;assembly=Syncfusion.Core.XForms"
+             x:Class="BankingExplorationApp.Views.ActivityPage"
+             BackgroundColor="White">
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid Padding="35,45,35,45" RowDefinitions="Auto,Auto,Auto,Auto,Auto,*,Auto" ColumnDefinitions="*,Auto">
+                <!-- Balance information-->
+                <Label Grid.Row="0" Grid.Column="0" Text="2 Feb, Monday" TextColor="Gray"/>
+                <Label Grid.Row="1" Grid.Column="0" Text="Hi, Jimmy!" FontSize="20" FontAttributes="Bold"/>
+                <sfavatar:SfAvatarView Grid.Row="0" Grid.RowSpan="2" Grid.Column="1" HorizontalOptions="End" ContentType="Custom"
+                               ImageSource="Marie.png"
+                               VerticalOptions="Center"
+                               BorderColor="White"
+                               HeightRequest="50"
+                               CornerRadius="25"
+                               WidthRequest="50" />
+                <Frame Margin="0,20" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" CornerRadius="30" BackgroundColor="#ff7114" HasShadow="False" HeightRequest="120">
+                   <Grid RowDefinitions="Auto,*" Padding="0,20" ColumnDefinitions="*,Auto">
+                       <Label Grid.Row="0" Grid.Column="1" Text="..." TextColor="White" />
+                       <Label Grid.Row="0" Grid.Column="0" Text="Balance" FontSize="20" TextColor="White" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+                       <Label Grid.Row="1" Grid.Column="0" Text="$28,640" FontSize="40" TextColor="White" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+                   </Grid>
+               </Frame>
+               <!-- Friends-->
+               <Grid Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" RowDefinitions="Auto,Auto" ColumnDefinitions="Auto,*">
+                   <Button Grid.Row="0" Grid.Column="0" Text="+" TextColor="White" BackgroundColor="Black" CornerRadius="30" WidthRequest="60" HeightRequest="60"/>
+                   <Label Grid.Row="1" Grid.Column="0" Text="Add&#10;Friend" HorizontalTextAlignment="Center"/>
+                   <CollectionView Grid.Row="0" Grid.RowSpan="2" Grid.Column="1" ItemsSource="{Binding FriendsCollection}"
+                                   HeightRequest="110" Margin="0,0,-45,0"
+                                   HorizontalScrollBarVisibility="Never"
+                                   ItemsLayout="HorizontalList">
+                                 <CollectionView.ItemTemplate>
+                                       <DataTemplate>
+                                          <Grid RowDefinitions="Auto,Auto">
+                                               <sfavatar:SfAvatarView Grid.Row="0" HorizontalOptions="End" ContentType="Custom"
+                                                   ImageSource="{Binding Image}"
+                                                   VerticalOptions="Center"
+                                                   BorderColor="White"
+                                                   HeightRequest="60"
+                                                   CornerRadius="30"
+                                                   WidthRequest="60" />
+                                              <Label Grid.Row="1" WidthRequest="80" Text="{Binding Name}" HorizontalTextAlignment="Center"/>
+                                          </Grid> 
+                                       </DataTemplate>
+                                </CollectionView.ItemTemplate>
+                   </CollectionView> 
+               </Grid>
+               <!-- Activities-->
+               <Label Grid.Row="4" Grid.Column="0" Text="New Activity" FontAttributes="Bold" Padding="0,20" FontSize="25"/> 
+               <Label Grid.Row="4" Grid.Column="1" Text="View All" Padding="0,20" TextColor="Silver" FontAttributes="Bold" HorizontalTextAlignment="End" FontSize="20"/> 
+
+                <CollectionView Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" ItemsSource="{Binding ActivitiesCollection}" HeightRequest="200"
+                                   VerticalScrollBarVisibility="Never">
+                                 <CollectionView.ItemTemplate>
+                                       <DataTemplate>
+                                          <Grid RowDefinitions="Auto,Auto" ColumnDefinitions="Auto,*,Auto" Padding="0,10">
+                                              <Button Grid.Row="0" Grid.RowSpan="2" Grid.Column="0"  ImageSource="{Binding Image}" TextColor="White" BackgroundColor="#e8e8e8" CornerRadius="25" WidthRequest="50" HeightRequest="50"/>
+                                              <Label Grid.Row="0" Grid.Column="1" Text="{Binding Title}" Padding="15,0,0,0" FontAttributes="Bold" />
+                                              <Label Grid.Row="1" Grid.Column="1" Text="{Binding Date}" Padding="15,0,0,0" TextColor="Silver"/>
+                                              <Label Grid.Row="0" Grid.Column="2" Grid.RowSpan="2" Text="{Binding Price}" VerticalTextAlignment="Center" TextColor="#589280" FontAttributes="Bold" Padding="15,0,0,0"/>
+                                          </Grid> 
+                                       </DataTemplate>
+                                </CollectionView.ItemTemplate>
+                   </CollectionView>
+                <!--Bottom menu-->
+                <Grid Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" RowDefinitions="Auto" ColumnDefinitions="*,Auto,*" VerticalOptions="EndAndExpand">
+                      <Image Grid.Row="0" Grid.Column="0" HeightRequest="50" Source="House" BackgroundColor="Transparent" />
+                      <Button Grid.Row="0" Grid.Column="1" ImageSource="Main" TextColor="Black" BackgroundColor="#ff7114" CornerRadius="25" WidthRequest="50" HeightRequest="50"/>
+                      <Image Grid.Row="0" Grid.Column="2" HeightRequest="50" Source="Arrows" BackgroundColor="Transparent"/>
+                </Grid>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

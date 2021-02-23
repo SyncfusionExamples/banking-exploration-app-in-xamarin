@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BankingExplorationApp.Views.SuccessPage"
+             xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             BackgroundColor="Black">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame Margin="{OnPlatform iOS='0,140,0,-22', Android='0,70,0,22'}" CornerRadius="30" VerticalOptions="FillAndExpand">
+                <StackLayout>
+                    <Image Source="Success" Margin="50,30"/>
+                    <Label Text="Success" FontSize="20" HorizontalTextAlignment="Center" FontAttributes="Bold"/>
+                    <Label Text="$120.00" Margin="0,20" FontSize="20" BackgroundColor="#e8e8e8" Padding="45,20" HorizontalOptions="Center" HorizontalTextAlignment="Center" FontAttributes="Bold"/>
+                    <Label Text="Has been send to Visa&#10;X-4860 from your balance" TextColor="Silver" FontSize="20" HorizontalTextAlignment="Center"/>
+                    <buttons:SfButton Text="Done" Margin="0,0,0,50" FontAttributes="Bold" WidthRequest="165" HeightRequest="60" HorizontalOptions="Center" VerticalOptions="EndAndExpand" CornerRadius="30" TextColor="White" BackgroundColor="Black"/>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
