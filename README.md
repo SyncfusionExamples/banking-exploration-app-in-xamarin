@@ -1,7 +1,7 @@
 # Banking exploration app in Xamarin
 This repository has the Xamarin UI project that replicate a Banking exploration app.
 
-##Prerequisites
+## Prerequisites
 
 * Visual Studio 2019 (Xamarin)
 
